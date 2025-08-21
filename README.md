@@ -62,4 +62,19 @@
     - Search bar
     - Movie suggestions
 
+## 🔑 How to Get Your OpenAI API Key
 
+To run this project, you need your own OpenAI API key. Follow these steps:
+
+Go to https://platform.openai.com
+ and log in with your OpenAI account.
+
+# 1. In the top-right corner, click on your profile picture → View API Keys.
+
+# 2. Click Create new secret key.
+
+# 3. Copy the key and save it securely (you won’t be able to view it again).
+
+# 4. Create a .env file in the project root and add:
+
+- OPENAI_API_KEY=your_api_key_here
