@@ -42,6 +42,9 @@
 - GPT Search Page and GPT search bar
 - (STAR FEATURE)Multiple language support in app
 - Integrate GPT apis( get openAI key)
+- Installed [npm install react-hot-toast] for elegant toast notifications
+- Implemented toast notifications for various actions
+- OpenAI integration to GPTSearchBar
 
 
 ## Features of Netflix GPT
