@@ -6,7 +6,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 
 import { toggleGptSearch } from "../store/gptSlice";
-import { LOGO } from "../constants/constants";
+import { LOGO, HEADER_BUTTONS } from "../constants/constants";
 import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
@@ -28,14 +28,26 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute flex justify-between w-screen z-30 px-8 py-2 bg-gradient-to-b from-black">
-      <img className="w-44" src={LOGO} alt="logo" />
+    <div className="absolute flex justify-between w-screen z-30 px-10 py-1 bg-gradient-to-b from-black">
+      <div className="flex gap-10">
+        <img className="w-32" src={LOGO} alt="logo" />
+        <div className="flex gap-6 ">
+          {HEADER_BUTTONS.map((button) => (
+            <button
+              key={button}
+              className="text-gray-300 text-sm font-light hover:text-white"
+            >
+              {button}
+            </button>
+          ))}
+        </div>
+      </div>
       {user.isAuthenticated && (
         <div className="flex items-center gap-4">
           {showGPTSearch && <LanguageSelector />}
           <button
             onClick={handleGPTSearchClick}
-            className="py-2 px-3 bg-transparent text-white hover:bg-white hover:text-black texxt-2xl font-semibold rounded-lg mr-2"
+            className="py-2 px-3 bg-transparent text-gray-300 text-sm font-light hover:bg-white hover:text-black hover:font-semibold rounded-lg mr-2"
           >
             {showGPTSearch ? "Go Home" : "GPT Search"}
           </button>
@@ -44,7 +56,10 @@ const Header = () => {
             alt="user-image"
             className="w-12 rounded-4xl"
           />
-          <button onClick={handleSignOut} className="text-white font-semibold">
+          <button
+            onClick={handleSignOut}
+            className="text-gray-300 text-sm font-light"
+          >
             Sign Out
           </button>
         </div>

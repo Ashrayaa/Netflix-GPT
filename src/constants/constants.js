@@ -16,3 +16,15 @@ export const OPENAI_API_KEY = "";
 
 export const BG_IMG =
   "https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/IN-en-20250721-TRIFECTA-perspective_cadc8408-df6e-4313-a05d-daa9dcac139f_large.jpg";
+
+export const BACKGROUND_IMAGE =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/c31c3123-3df7-4359-8b8c-47509d9c9459/a729b196-9629-45f8-934a-ce07a1113fee/US-en-20231225-popsignuptwoweeks-perspective_alpha_website_large.jpg";
+
+export const HEADER_BUTTONS = [
+  "Home",
+  "TV Shows",
+  "Movies",
+  "Games",
+  "New & Popular",
+  "My List",
+];
