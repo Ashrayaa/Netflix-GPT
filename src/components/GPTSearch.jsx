@@ -5,8 +5,8 @@ import { BG_IMG } from "../constants/constants";
 
 const GPTSearch = () => {
   return (
-    <>
-      <div className="fixed -z-10">
+    <div className="h-screen">
+      <div className="absolute -z-10">
         <img
           className="h-screen w-screen object-cover"
           src={BG_IMG}
@@ -18,7 +18,7 @@ const GPTSearch = () => {
         <GPTSearchBar />
         <GPTMovieSuggetions />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -11,6 +11,7 @@ import {
 import useMovieCategory from "../hooks/useMovieCategory";
 import GPTSearch from "./GPTSearch";
 import { useSelector } from "react-redux";
+import Footer from "./Footer";
 
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
@@ -31,6 +32,8 @@ const Browse = () => {
           <SecondaryContainer />
         </>
       )}
+
+      <Footer />
     </div>
   );
 };
