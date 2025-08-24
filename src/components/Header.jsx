@@ -31,38 +31,42 @@ const Header = () => {
     <div className="absolute flex justify-between w-screen z-30 px-10 py-1 bg-gradient-to-b from-black">
       <div className="flex gap-10">
         <img className="w-32" src={LOGO} alt="logo" />
-        <div className="flex gap-6 ">
-          {HEADER_BUTTONS.map((button) => (
-            <button
-              key={button}
-              className="text-gray-300 text-sm font-light hover:text-white"
-            >
-              {button}
-            </button>
-          ))}
-        </div>
+        {user.isAuthenticated && (
+          <div className="flex gap-6 ">
+            {HEADER_BUTTONS.map((button) => (
+              <button
+                key={button}
+                className="text-gray-300 text-sm font-light hover:text-white"
+              >
+                {button}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
       {user.isAuthenticated && (
-        <div className="flex items-center gap-4">
-          {showGPTSearch && <LanguageSelector />}
-          <button
-            onClick={handleGPTSearchClick}
-            className="py-2 px-3 bg-transparent text-gray-300 text-sm font-light hover:bg-white hover:text-black hover:font-semibold rounded-lg mr-2"
-          >
-            {showGPTSearch ? "Go Home" : "GPT Search"}
-          </button>
-          <img
-            src={user?.user.photoURL}
-            alt="user-image"
-            className="w-12 rounded-4xl"
-          />
-          <button
-            onClick={handleSignOut}
-            className="text-gray-300 text-sm font-light"
-          >
-            Sign Out
-          </button>
-        </div>
+        <>
+          <div className="flex items-center gap-4">
+            {showGPTSearch && <LanguageSelector />}
+            <button
+              onClick={handleGPTSearchClick}
+              className="py-2 px-3 bg-transparent text-gray-300 text-sm font-light hover:bg-white hover:text-black hover:font-semibold rounded-lg mr-2"
+            >
+              {showGPTSearch ? "Go Home" : "GPT Search"}
+            </button>
+            <img
+              src={user?.user.photoURL}
+              alt="user-image"
+              className="w-12 rounded-4xl"
+            />
+            <button
+              onClick={handleSignOut}
+              className="text-gray-300 text-sm font-light"
+            >
+              Sign Out
+            </button>
+          </div>
+        </>
       )}
     </div>
   );
