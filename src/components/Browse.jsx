@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
 import Header from "./Header";
+import Footer from "./Footer";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
+import GPTSearch from "./GPTSearch";
+
 import {
   addNowPlayingMovies,
   addPopularMovies,
@@ -9,9 +13,6 @@ import {
 } from "../store/movieSlice";
 
 import useMovieCategory from "../hooks/useMovieCategory";
-import GPTSearch from "./GPTSearch";
-import { useSelector } from "react-redux";
-import Footer from "./Footer";
 
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);

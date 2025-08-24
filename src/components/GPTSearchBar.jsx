@@ -1,9 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import { lang } from "../constants/languageConstants";
 import { useRef } from "react";
-// import client from "../utils/openAI";
+import { useDispatch, useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
+
+// import client from "../utils/openAI";
+
+import { lang } from "../constants/languageConstants";
 import { API_OPTIONS } from "../constants/constants";
+
 import { addGPTMovieResults } from "../store/gptSlice";
 
 const GPTSearchBar = () => {

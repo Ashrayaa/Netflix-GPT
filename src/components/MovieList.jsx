@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import MovieCard from "./MovieCard";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+import MovieCard from "./MovieCard";
 
 const MovieList = ({ title, movies }) => {
   const [isScrollable, setIsScrollable] = useState(false);

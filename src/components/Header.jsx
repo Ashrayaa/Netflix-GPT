@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
 
 import { auth } from "../utils/firebase";
-import { LOGO } from "../constants/constants";
 
 import { toggleGptSearch } from "../store/gptSlice";
-import { SUPPORTED_LANGUAGES } from "../constants/languageConstants";
 import { changeLanguage } from "../store/configSlice";
+
+import { SUPPORTED_LANGUAGES } from "../constants/languageConstants";
+import { LOGO } from "../constants/constants";
 
 const Header = () => {
   const navigate = useNavigate();

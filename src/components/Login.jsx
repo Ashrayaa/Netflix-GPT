@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 
 import Header from "./Header";
+
 import { checkValidData } from "../utils/validation";
 import {
   createUserWithEmailAndPassword,
@@ -9,6 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+
 import { addUser } from "../store/userSlice";
 import { BG_IMG } from "../constants/constants";
 
