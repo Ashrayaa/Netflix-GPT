@@ -6,10 +6,8 @@ import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 
 import { toggleGptSearch } from "../store/gptSlice";
-import { changeLanguage } from "../store/configSlice";
-
-import { SUPPORTED_LANGUAGES } from "../constants/languageConstants";
 import { LOGO } from "../constants/constants";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -29,27 +27,12 @@ const Header = () => {
     dispatch(toggleGptSearch());
   };
 
-  const handleLanguageChange = (e) => {
-    dispatch(changeLanguage(e.target.value));
-  };
-
   return (
     <div className="absolute flex justify-between w-screen z-30 px-8 py-2 bg-gradient-to-b from-black">
       <img className="w-44" src={LOGO} alt="logo" />
       {user.isAuthenticated && (
         <div className="flex items-center gap-4">
-          {showGPTSearch && (
-            <select
-              className="bg-transparent cursor-pointer text-white border border-gray-300 rounded-md px-2 py-1"
-              onChange={handleLanguageChange}
-            >
-              {SUPPORTED_LANGUAGES.map((lang) => (
-                <option key={lang.identifier} value={lang.identifier}>
-                  {lang.name}
-                </option>
-              ))}
-            </select>
-          )}
+          {showGPTSearch && <LanguageSelector />}
           <button
             onClick={handleGPTSearchClick}
             className="py-2 px-3 bg-transparent text-white hover:bg-white hover:text-black texxt-2xl font-semibold rounded-lg mr-2"
