@@ -3,12 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const gptSlice = createSlice({
   name: "gpt",
   initialState: {
-    gptSuggestions: null,
+    movieResults: null,
+    movieNames: null,
     showGptSearch: false,
   },
   reducers: {
-    addGPTSuggestions: (state, action) => {
-      state.gptSuggestions = action.payload;
+    addGPTMovieResults: (state, action) => {
+      const { movieNames, movieResults } = action.payload;
+      state.movieNames = movieNames;
+      state.movieResults = movieResults;
     },
     toggleGptSearch: (state) => {
       state.showGptSearch = !state.showGptSearch;
@@ -16,5 +19,5 @@ const gptSlice = createSlice({
   },
 });
 
-export const { addGPTSuggestions, toggleGptSearch } = gptSlice.actions;
+export const { addGPTMovieResults, toggleGptSearch } = gptSlice.actions;
 export default gptSlice.reducer;
