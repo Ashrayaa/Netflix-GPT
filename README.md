@@ -45,6 +45,7 @@
 - Installed [npm install react-hot-toast] for elegant toast notifications
 - Implemented toast notifications for various actions
 - OpenAI integration to GPTSearchBar
+- Enhance MovieList component with scroll functionality and add custom scrollbar styles
 
 
 ## Features of Netflix GPT
