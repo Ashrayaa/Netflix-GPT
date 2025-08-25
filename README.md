@@ -46,6 +46,7 @@
 - Implemented toast notifications for various actions
 - OpenAI integration to GPTSearchBar
 - Enhance MovieList component with scroll functionality and add custom scrollbar styles
+- Made whole application responsive
 
 
 ## Features of Netflix GPT

@@ -40,8 +40,8 @@ const MovieList = ({ title, movies }) => {
   };
 
   return (
-    <div className="px-10 relative group">
-      <h1 className="text-3xl text-white font-bold py-2">{title}</h1>
+    <div className="px-6 lg:px-10 relative group">
+      <h1 className="text-sm lg:text-3xl text-white font-bold py-2">{title}</h1>
       <div className="relative">
         {isScrollable && (
           <div

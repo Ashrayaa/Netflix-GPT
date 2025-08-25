@@ -93,16 +93,17 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          className="h-screen w-screen object-cover"
+          className="hidden lg:inline-block h-screen w-screen object-cover"
           src={BG_IMG}
           alt="bg-image"
         />
       </div>
+      <div className=" absolute inset-0 lg:hidden bg-black"></div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute z-20 w-full md:w-4/12 lg:w-3/12 p-12 bg-black opacity-85 my-36 mx-auto right-0 left-0 text-white rounded-lg"
+        className="absolute z-20 w-full md:w-4/12 lg:w-3/12 p-12 bg-black lg:opacity-85 mt-12 lg:my-36 mx-auto right-0 left-0 text-white lg:rounded-lg"
       >
-        <h1 className="font-bold text-3xl py-4">
+        <h1 className="font-medium text-xl lg:font-bold lg:text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
 
@@ -111,21 +112,21 @@ const Login = () => {
             ref={fullName}
             type="text"
             placeholder="Full Name"
-            className="p-4 my-4 w-full bg-[#333] rounded-md border border-gray-500"
+            className="p-4 my-4 w-full bg-[#333] rounded-md border border-gray-500 focus: outline-none"
           />
         )}
         <input
           type="text"
           ref={email}
           placeholder="Email or mobile number"
-          className="p-4 my-4 w-full bg-[#333] rounded-md border border-gray-500"
+          className="p-4 my-4 w-full bg-[#333] rounded-md border border-gray-500 focus: outline-none"
         />
 
         <input
           type="password"
           ref={password}
           placeholder="Password"
-          className="p-4 my-4 w-full bg-[#333] rounded-md border border-gray-500"
+          className="p-4 my-4 w-full bg-[#333] rounded-md border border-gray-500 focus: outline-none"
         />
         {errorMessage ? (
           <p className="text-red-800 text-sm font-semibold py-2">

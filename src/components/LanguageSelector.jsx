@@ -21,7 +21,7 @@ const LanguageSelector = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-transparent cursor-pointer text-white border border-gray-300 rounded-md px-2 py-1 flex items-center"
+        className="bg-transparent cursor-pointer text-gray-400 border border-gray-400 rounded-md px-2 py-1 flex items-center"
       >
         {selectedLanguageName}
         <svg
@@ -48,8 +48,10 @@ const LanguageSelector = () => {
               <li
                 key={lang.identifier}
                 onClick={() => handleLanguageChange(lang.identifier)}
-                className={`px-4 py-2 text-white cursor-pointer hover:bg-gray-700 ${
-                  currentLang === lang.identifier ? "font-bold" : ""
+                className={`px-4 py-2 text-gray-400 cursor-pointer hover:bg-gray-700 ${
+                  currentLang === lang.identifier
+                    ? "font-light lg:font-bold"
+                    : ""
                 }`}
               >
                 {currentLang === lang.identifier && (
